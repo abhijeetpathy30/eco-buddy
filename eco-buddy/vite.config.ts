@@ -7,6 +7,7 @@ export default defineConfig({
   base: '/eco-buddy/', // Important for GitHub Pages deployment
   plugins: [react()],
   define: {
-    'process.env.API_KEY': `"${process.env.API_KEY}"`
+    // This makes the environment variable available in your client-side code
+    'process.env.API_KEY': JSON.stringify(process.env.API_KEY)
   }
 })

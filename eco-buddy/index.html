@@ -6,6 +6,11 @@
     <link rel="icon" type="image/svg+xml" href="/leaf.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Eco-Buddy: Your Climate Companion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#0B121E">
     <style>
       /* For custom scrollbar styling */
       ::-webkit-scrollbar {
@@ -13,14 +18,14 @@
         height: 8px;
       }
       ::-webkit-scrollbar-track {
-        background: #1c2a2b; /* Dark Green-Slate */
+        background: #0B121E; 
       }
       ::-webkit-scrollbar-thumb {
-        background: #3a5a5c; /* Muted Teal */
+        background: #151E2C; 
         border-radius: 10px;
       }
       ::-webkit-scrollbar-thumb:hover {
-        background: #4a7a7d; /* Brighter Teal */
+        background: #2DD4BF; 
       }
       @keyframes fade-in {
           from { opacity: 0; transform: translateY(10px); }
@@ -44,9 +49,20 @@
 </script>
 <link rel="stylesheet" href="/index.css">
 </head>
-  <body class="bg-slate-900">
+  <body class="bg-background">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').then(registration => {
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+          }, err => {
+            console.log('ServiceWorker registration failed: ', err);
+          });
+        });
+      }
+    </script>
   <script type="module" src="/index.tsx"></script>
 </body>
 </html>

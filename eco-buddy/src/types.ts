@@ -1,10 +1,11 @@
 
-export type Advisor = 'scientist' | 'elder' | 'nature' | 'ai';
+export type Advisor = 'scientist' | 'financial' | 'elder' | 'nature' | 'ai';
 
 export interface CurrentActivityAnalysis {
   harm: string; // The negative impact of the current choice.
   emissionAnalogy: string; // A relatable analogy for the emissions cost.
   futureImpact: string; // The long-term consequences.
+  financialCost?: string; // An optional analysis of the financial cost.
 }
 
 export interface Suggestion {
@@ -15,6 +16,7 @@ export interface Suggestion {
   cons: string[];
   imageQuery: string;
   emissionReductionAnalogy: string; // A relatable analogy for the positive change.
+  financialImpact?: string; // An optional summary of the financial impact.
 }
 
 export interface AnalysisResponse {

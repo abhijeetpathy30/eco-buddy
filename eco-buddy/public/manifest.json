@@ -1,0 +1,22 @@
+
+{
+  "name": "Eco-Buddy",
+  "short_name": "Eco-Buddy",
+  "description": "Your personal climate companion to help you make eco-friendly decisions.",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#0B121E",
+  "theme_color": "#2DD4BF",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
